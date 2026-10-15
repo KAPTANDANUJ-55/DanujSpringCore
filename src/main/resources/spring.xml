@@ -7,11 +7,13 @@
 
 <!--    </bean>-->
 
-    <bean id="character1" class="org.Demo.Character">  <!--without id this will create the object-->
-
+    <bean id="character1" class="org.Demo.Character" >  <!--without id this will create the object-->
+    <property name="game" ref="game"/>
     </bean>
 
     <bean id="game" class="org.Demo.Game">
+        <property name="id" value="1" />    <!-- setter injection -->
+        <property name="name" value="Doom Eternal"/>  <!-- setter injection -->
 
     </bean>
 

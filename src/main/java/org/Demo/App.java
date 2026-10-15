@@ -13,9 +13,12 @@ public class App
     {
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
         Game game = (Game) context.getBean("game");
+         Character character = (Character) context.getBean("character1");
 
-        game.setId(1);
-        game.setName("Doom Eternal");
+         character.action();
+//        game.setId(1);
+//        game.setName("Doom Eternal");
+//        abv get set thing we are not doing we want setter injection which is in xml
 
         System.out.println( game.getName());
         System.out.println(game.getId());
