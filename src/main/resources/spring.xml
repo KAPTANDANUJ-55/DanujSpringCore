@@ -17,5 +17,24 @@
 
     </bean>
 
+    <bean name="cj1" class="org.Demo.Cj1">
+<!--        <constructor-arg value="21"/>-->
+<!--        <constructor-arg value="Rahul"/>-->
+<!--        <constructor-arg value="123456"/>-->
+<!--        <constructor-arg value="r@r"/>-->
+
+<!--        explicit mention-->
+
+<!--            <constructor-arg index="0" type="int" value="21"/>-->
+<!--            <constructor-arg index="1" type="java.lang.String" value="Rahul"/>-->
+<!--            <constructor-arg index="2" type="int" value="123456"/>-->
+<!--            <constructor-arg index="3" type="java.lang.String" value="r@r"/>-->
+<!--            abv approach is best-->
+
+        <constructor-arg name="name" value="gaurav"/>
+        <constructor-arg name="age" value="12"/>
+
+    </bean>
+
 </beans>
 
