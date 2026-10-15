@@ -11,11 +11,11 @@
 <!--    <property name="game" ref="game"/>-->
 <!--    </bean>-->
 
-<!--    <bean id="game" class="org.Demo.Game">-->
-<!--        <property name="id" value="1" />    &lt;!&ndash; setter injection &ndash;&gt;-->
-<!--        <property name="name" value="Doom Eternal"/>  &lt;!&ndash; setter injection &ndash;&gt;-->
+    <bean id="game" class="org.Demo.Game" lazy-init="true">
+        <property name="id" value="1" />    <!-- setter injection -->
+        <property name="name" value="Doom Eternal"/>  <!-- setter injection -->
 
-<!--    </bean>-->
+    </bean>
 
 <!--    <bean name="cj1" class="org.Demo.Cj1">-->
 <!--        <constructor-arg value="21"/>-->
@@ -42,7 +42,7 @@
 
 
     <bean name="mortal" class="org.Demo.s_core_autowire.MortalShell" primary="true"/>
-    <bean id="character" class="org.Demo.Character" autowire="byType">
+    <bean id="character" class="org.Demo.Character">
 <!--       <property name="game2" ref="gtaiv"/>-->
     </bean>
 </beans>

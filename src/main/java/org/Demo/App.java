@@ -23,7 +23,6 @@ Character character = (Character) context.getBean("character");
 //        System.out.println(cj1.getEmail());
 //        System.out.println(cj1.getName());
 
-   character.showGame();
 
 
 //        Game game = (Game) context.getBean("game");
