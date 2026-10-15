@@ -41,9 +41,9 @@
     <bean name="gtaiv" class="org.Demo.s_core_autowire.GtaIv"/>
 
 
-    <bean name="mortal" class="org.Demo.s_core_autowire.MortalShell"/>
-    <bean id="character" class="org.Demo.Character">
-        <property name="game2" ref="gtaiv"/>
+    <bean name="mortal" class="org.Demo.s_core_autowire.MortalShell" primary="true"/>
+    <bean id="character" class="org.Demo.Character" autowire="byType">
+<!--       <property name="game2" ref="gtaiv"/>-->
     </bean>
 </beans>
 
