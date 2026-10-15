@@ -7,17 +7,17 @@
 
 <!--    </bean>-->
 
-    <bean id="character1" class="org.Demo.Character" >  <!--without id this will create the object-->
-    <property name="game" ref="game"/>
-    </bean>
+<!--    <bean id="character1" class="org.Demo.Character" >  &lt;!&ndash;without id this will create the object&ndash;&gt;-->
+<!--    <property name="game" ref="game"/>-->
+<!--    </bean>-->
 
-    <bean id="game" class="org.Demo.Game">
-        <property name="id" value="1" />    <!-- setter injection -->
-        <property name="name" value="Doom Eternal"/>  <!-- setter injection -->
+<!--    <bean id="game" class="org.Demo.Game">-->
+<!--        <property name="id" value="1" />    &lt;!&ndash; setter injection &ndash;&gt;-->
+<!--        <property name="name" value="Doom Eternal"/>  &lt;!&ndash; setter injection &ndash;&gt;-->
 
-    </bean>
+<!--    </bean>-->
 
-    <bean name="cj1" class="org.Demo.Cj1">
+<!--    <bean name="cj1" class="org.Demo.Cj1">-->
 <!--        <constructor-arg value="21"/>-->
 <!--        <constructor-arg value="Rahul"/>-->
 <!--        <constructor-arg value="123456"/>-->
@@ -31,10 +31,19 @@
 <!--            <constructor-arg index="3" type="java.lang.String" value="r@r"/>-->
 <!--            abv approach is best-->
 
-        <constructor-arg name="name" value="gaurav"/>
-        <constructor-arg name="age" value="12"/>
+<!--        <constructor-arg name="name" value="gaurav"/>-->
+<!--        <constructor-arg name="age" value="12"/>-->
 
+
+
+<!--    </bean>-->
+
+    <bean name="gtaiv" class="org.Demo.s_core_autowire.GtaIv"/>
+
+
+    <bean name="mortal" class="org.Demo.s_core_autowire.MortalShell"/>
+    <bean id="character" class="org.Demo.Character">
+        <property name="game2" ref="gtaiv"/>
     </bean>
-
 </beans>
 
