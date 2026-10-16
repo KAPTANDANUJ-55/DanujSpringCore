@@ -28,7 +28,7 @@ public class App
         Game game1 = context.getBean("Doom",Game.class);
         game1.pG("Skyrim");
        Cj1 cj1 = context.getBean(Cj1.class);
-
+          cj1.
 
                System.out.println( cj1.getName());
               System.out.println(cj1.getEmail());
