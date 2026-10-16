@@ -1,9 +1,11 @@
 package org.Demo;
 
-import org.Demo.s_core_autowire.Game;
+import javabasedconfig.Game;
+import javabasedconfig.JavaConfig;
 import org.Demo.s_core_autowire.GtaIv;
 import org.springframework.context.ApplicationContext;
 import org.Demo.s_core_autowire.GtaIv;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -14,8 +16,41 @@ public class App
 {
     public static void main( String[] args )
     {
-        ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
-Character character = (Character) context.getBean("character");
+//        ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+
+        ApplicationContext context = new AnnotationConfigApplicationContext(JavaConfig.class);
+
+
+        Game game = context.getBean("Doom",Game.class);
+           Character character = context.getBean(Character.class);
+        game.pG("Doom Eternal");
+
+        Game game1 = context.getBean("Doom",Game.class);
+        game1.pG("Skyrim");
+       Cj1 cj1 = context.getBean(Cj1.class);
+
+
+               System.out.println( cj1.getName());
+              System.out.println(cj1.getEmail());
+        System.out.println(cj1.getAge());
+//       cj1.setAge(34);
+//       cj1.setName("Daniel");
+//       cj1.setAadhar(8104);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Character character = (Character) context.getBean("character");
 //        Cj1 cj1 = (Cj1) context.getBean("cj1");
 //        System.out.println(cj1.getAge());
 //

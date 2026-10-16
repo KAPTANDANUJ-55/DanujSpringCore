@@ -1,5 +1,7 @@
 package org.Demo;
 
+import org.Demo.s_core_autowire.Game;
+
 import java.beans.ConstructorProperties;
 
 public class Cj1 {
@@ -8,7 +10,20 @@ public class Cj1 {
     private String name;
     private int aadhar;
     private String email;
+   Game game;
+   javabasedconfig.Game game2;
 
+    public Game getGame() {
+        return game;
+    }
+
+    public void setGame(Game game) {
+        this.game = game;
+    }
+
+    public Cj1() {
+
+    }
     public Cj1(int age, String name, int aadhar, String email) {
         this.age = age;
         this.name = name;
@@ -56,5 +71,10 @@ public class Cj1 {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public void call(){
+        System.out.println("Cj1 Method Called") ;
+    game2.pG("Manhunt");
     }
 }
